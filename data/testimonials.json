@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Ramesh Gowda",
+    "role": "Chairman, Mysuru Group of Institutions",
+    "text": "Campus Crew covered our annual college fest and showcased our academic achievements. The video production was outstanding, and our admissions inquiries saw a significant boost. Truly professional!",
+    "rating": 5,
+    "tag": "Education"
+  },
+  {
+    "id": 2,
+    "name": "Ananya R.",
+    "role": "Founder, The Mysore Organic Store",
+    "text": "We worked with the digital team for our Zero-to-Growth Setup. Within two months, our local Google maps ranking shot to the top, and our online store is now receiving regular orders. Incredible dedication!",
+    "rating": 5,
+    "tag": "E-Commerce"
+  },
+  {
+    "id": 3,
+    "name": "Siddharth Shetty",
+    "role": "Director, Heritage Stay Resorts",
+    "text": "Their Business Spotlight segment was beautifully shot. It captured the heritage aspect of our resort perfectly. The video got over 50,000 organic views on social channels and boosted bookings.",
+    "rating": 5,
+    "tag": "Video Marketing"
+  },
+  {
+    "id": 4,
+    "name": "Sunitha Srinivasan",
+    "role": "Proprietor, Swarna Jewellers",
+    "text": "We run festival ad campaigns through Global Media Network. Their Meta and Google ads management is extremely transparent and delivers real footfall to our showroom. Highly recommended!",
+    "rating": 5,
+    "tag": "Advertising"
+  }
+]

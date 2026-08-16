@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Mysore Palace Golden Hour",
+    "category": "culture",
+    "filename": "mysore_palace_golden.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Journalist Interview Session",
+    "category": "prime9",
+    "filename": "journalist_interview.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Spiritual Tour of Chamundi Hill",
+    "category": "culture",
+    "filename": "chamundi_spiritual.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Corporate Business Spotlight Shoot",
+    "category": "business",
+    "filename": "business_spotlight_shoot.jpg"
+  },
+  {
+    "id": 5,
+    "title": "College Campus Crew Coverage",
+    "category": "campus",
+    "filename": "college_campus_crew.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Dasara Cultural Celebrations",
+    "category": "events",
+    "filename": "dasara_cultural.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Newsroom Editorial Meeting",
+    "category": "news",
+    "filename": "newsroom_meeting.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Local Startup Summit Mysuru",
+    "category": "business",
+    "filename": "startup_summit.jpg"
+  }
+]
