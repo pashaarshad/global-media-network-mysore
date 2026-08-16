@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "slug": "news",
+    "title": "News",
+    "tagline": "Stay Informed. Stay Ahead.",
+    "description": "Comprehensive coverage of Mysuru's most important developments — civic updates, government decisions, community initiatives, business announcements, education reforms, cultural milestones, and the stories that shape daily life in the city.",
+    "topics": [
+      "Civic & Government Updates",
+      "Community Initiatives",
+      "Business & Economy",
+      "Education & Institutions",
+      "Cultural Milestones",
+      "Technology & Innovation",
+      "Public Welfare & Awareness"
+    ],
+    "icon": "📰",
+    "image": "news"
+  },
+  {
+    "id": 2,
+    "slug": "journey-junction",
+    "title": "Journey Junction with Sumithra",
+    "tagline": "Every Success Has a Journey Worth Discovering.",
+    "description": "An inspiring interview-format program that uncovers the real stories behind extraordinary achievers. From entrepreneurs and educators to artists, athletes, and social changemakers — Journey Junction celebrates persistence, passion, and purpose.",
+    "topics": [
+      "Entrepreneur Success Stories",
+      "Educators & Academics",
+      "Artists & Performers",
+      "Social Changemakers",
+      "Youth Icons & Athletes",
+      "Motivational Life Journeys",
+      "Business & Innovation Leaders"
+    ],
+    "icon": "🎙️",
+    "image": "journey-junction"
+  },
+  {
+    "id": 3,
+    "slug": "daiva-darshana",
+    "title": "Daiva Darshana",
+    "tagline": "A Journey Through Faith, History and Heritage.",
+    "description": "A spiritual travelogue exploring the sacred temples, ancient shrines, divine stories and religious heritage of Karnataka and beyond. Daiva Darshana connects communities to their spiritual roots through respectful and enriching storytelling.",
+    "topics": [
+      "Sacred Temples of Karnataka",
+      "Ancient Shrine Stories",
+      "Spiritual Traditions & Rituals",
+      "Religious Heritage Sites",
+      "Divine Legends & Mythology",
+      "Cultural & Festival Significance",
+      "Pilgrimage Journeys"
+    ],
+    "icon": "🛕",
+    "image": "daiva-darshana"
+  },
+  {
+    "id": 4,
+    "slug": "business-spotlight",
+    "title": "Business Spotlight",
+    "tagline": "Your Business. Your Story. Your Spotlight.",
+    "description": "A dedicated platform celebrating the entrepreneurs, startups, small businesses and established brands making a mark from Mysuru. Business Spotlight shares the vision, challenges and strategies behind Mysore's growing business ecosystem.",
+    "topics": [
+      "Startup & Entrepreneurship Stories",
+      "Local Brand Profiles",
+      "Business Growth Strategies",
+      "Innovation & Technology in Business",
+      "Women Entrepreneurs",
+      "Family Business Legacies",
+      "Industry Insights & Trends"
+    ],
+    "icon": "💼",
+    "image": "business-spotlight"
+  },
+  {
+    "id": 5,
+    "slug": "campus-crew",
+    "title": "Campus Crew",
+    "tagline": "Discover the Campus Beyond the Classroom.",
+    "description": "A vibrant campus-focused program that captures student life, college events, academic achievements, youth culture, sports, arts and everything happening inside Mysuru's colleges and universities. Campus Crew gives students a voice and a platform.",
+    "topics": [
+      "College Events & Fests",
+      "Student Achievements",
+      "Academic & Research Excellence",
+      "Sports & Athletics",
+      "Campus Arts & Culture",
+      "Student Entrepreneurship",
+      "Youth Voices & Opinions"
+    ],
+    "icon": "🎓",
+    "image": "campus-crew"
+  },
+  {
+    "id": 6,
+    "slug": "roots-reality",
+    "title": "Roots & Reality",
+    "tagline": "Real People. Real Experience. Real Conversations.",
+    "description": "An authentic documentary-style conversational program that explores the lives, experiences, challenges and aspirations of real people from Mysuru — farmers, craftspeople, healthcare workers, teachers, community leaders and everyday heroes.",
+    "topics": [
+      "Community Heroes & Unsung Stories",
+      "Traditional Craftspeople & Artisans",
+      "Farmers & Rural Voices",
+      "Healthcare & Social Workers",
+      "Honest Life Conversations",
+      "Generational Stories",
+      "Culture, Identity & Belonging"
+    ],
+    "icon": "🌿",
+    "image": "roots-reality"
+  }
+]
