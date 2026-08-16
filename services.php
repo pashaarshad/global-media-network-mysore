@@ -11,9 +11,7 @@ $services = get_json_data('services.json');
 $highlight_slug = isset($_GET['highlight']) ? clean($_GET['highlight']) : '';
 ?>
 
-<!-- Extra stylesheet overrides for interactive filters -->
-<?php
-$extra_css = '
+<!-- Services page specific styles -->
 <style>
 .services-search-container {
     background: #FFF;
@@ -161,8 +159,6 @@ $extra_css = '
     font-weight: bold;
 }
 </style>
-';
-?>
 
 <!-- ── 1. PAGE HEADER ── -->
 <section class="section-padding bg-navy-dark" style="padding-top: 10rem; padding-bottom: 7rem; text-align: center; background-image: linear-gradient(rgba(3,11,22,0.85), rgba(3,11,22,0.95)), url('<?php echo IMG_URL; ?>/hero/mysuru_palace.jpg'); background-size: cover; background-position: center;">

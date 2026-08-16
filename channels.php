@@ -59,11 +59,20 @@ $shows = get_json_data('shows.json');
             ?>
                 <div id="<?php echo $show['slug']; ?>" class="reveal" style="display:grid; grid-template-columns:1fr 1.2fr; gap:4rem; align-items:center; background:#FFF; border-radius:var(--border-radius-lg); border:var(--border-light); padding:3.5rem; box-shadow:var(--shadow-sm); <?php echo !$is_even ? 'direction: rtl;' : ''; ?>">
                     <!-- Column 1: Show Graphic / Thumbnail Mock -->
-                    <div style="direction: ltr; height: 350px; border-radius: var(--border-radius); overflow: hidden; background: linear-gradient(135deg, var(--primary-navy-dark) 0%, var(--primary-navy-light) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; border: var(--border-glow); position: relative; color: #FFF; text-align: center; padding: 2rem;">
-                        <span style="font-size: 5rem; margin-bottom: 1.5rem; display: block; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));"><?php echo htmlspecialchars($show['icon']); ?></span>
-                        <h4 style="color: #FFF; font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);"><?php echo htmlspecialchars($show['title']); ?></h4>
-                        <p style="color: var(--accent-gold-light); font-size: 0.85rem; font-style: italic; font-weight: 500;"><?php echo htmlspecialchars($show['tagline']); ?></p>
-                        <span style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.08); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.15);">Prime 9 Exclusive</span>
+                    <?php
+                    $img_path = IMG_URL . '/channels/' . $show['slug'] . '.jpg';
+                    $img_file = __DIR__ . '/assets/images/channels/' . $show['slug'] . '.jpg';
+                    $has_img  = file_exists($img_file);
+                    ?>
+                    <div style="direction: ltr; height: 350px; border-radius: var(--border-radius); overflow: hidden; <?php echo $has_img ? '' : 'background: linear-gradient(135deg, var(--primary-navy-dark) 0%, var(--primary-navy-light) 100%); border: var(--border-glow); padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #FFF;'; ?> position: relative;">
+                        <?php if($has_img): ?>
+                            <img src="<?php echo $img_path; ?>" alt="<?php echo htmlspecialchars($show['title']); ?>" style="width: 100%; height: 100%; object-fit: cover;">
+                        <?php else: ?>
+                            <span style="font-size: 5rem; margin-bottom: 1.5rem; display: block; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));"><?php echo htmlspecialchars($show['icon']); ?></span>
+                            <h4 style="color: #FFF; font-size: 1.5rem; margin-bottom: 0.5rem; font-family: var(--font-heading);"><?php echo htmlspecialchars($show['title']); ?></h4>
+                            <p style="color: var(--accent-gold-light); font-size: 0.85rem; font-style: italic; font-weight: 500;"><?php echo htmlspecialchars($show['tagline']); ?></p>
+                        <?php endif; ?>
+                        <span style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.08); padding: 0.4rem 1.2rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.15); <?php echo $has_img ? 'background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); color: #fff;' : ''; ?>">Prime 9 Exclusive</span>
                     </div>
                     
                     <!-- Column 2: Show Content Details -->

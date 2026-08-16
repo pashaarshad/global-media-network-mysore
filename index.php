@@ -108,42 +108,42 @@ $gallery = get_json_data('gallery.json');
         
         <div class="cover-grid reveal">
             <div class="cover-card gold-glow">
-                <span class="card-icon">📰</span>
+                <span class="card-icon"><i class="fa-solid fa-newspaper" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Mysore News &amp; Updates</h3>
                 <p>Stay informed about important developments, civic activities, public initiatives, and institutional updates.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon">🎉</span>
+                <span class="card-icon"><i class="fa-solid fa-calendar-star" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Events &amp; Celebrations</h3>
                 <p>Discover cultural programmes, conferences, exhibitions, competitions, festivals, and special occasions.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon">🎓</span>
+                <span class="card-icon"><i class="fa-solid fa-graduation-cap" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Education &amp; Campus</h3>
                 <p>Highlighting academic achievements, student activities, seminars, workshops, and research innovation.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon">💼</span>
+                <span class="card-icon"><i class="fa-solid fa-briefcase" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Business &amp; Startups</h3>
                 <p>Stories of entrepreneurs, local businesses, industries, professionals, and organizations driving economic growth.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon">🎭</span>
+                <span class="card-icon"><i class="fa-solid fa-masks-theater" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Entertainment &amp; Lifestyle</h3>
                 <p>Explore cinema, music, food travel, wellness trends, fashion, public personalities, and lifestyle blogs.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon">🚀</span>
+                <span class="card-icon"><i class="fa-solid fa-microchip" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Technology &amp; Innovation</h3>
                 <p>Coverage of emerging technologies, artificial intelligence tools, cybersecurity, and local digital transformation.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon">🛕</span>
+                <span class="card-icon"><i class="fa-solid fa-landmark-dome" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Culture &amp; Heritage</h3>
                 <p>Celebrating the rich traditions, traditional art, literature, history, temples, and cultural identity of Mysuru.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon">🤝</span>
+                <span class="card-icon"><i class="fa-solid fa-hands-holding-heart" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Community Stories</h3>
                 <p>Featuring inspiring individuals, social organizations, volunteers, and initiatives creating a positive impact.</p>
             </div>
@@ -168,10 +168,17 @@ $gallery = get_json_data('gallery.json');
                 <?php 
                 $featured_shows = array_slice($shows, 0, 3);
                 foreach($featured_shows as $show): 
+                $img_path = IMG_URL . '/channels/' . $show['slug'] . '.jpg';
+                $img_file = __DIR__ . '/assets/images/channels/' . $show['slug'] . '.jpg';
+                $has_img  = file_exists($img_file);
                 ?>
                     <div class="show-card">
-                        <div class="show-img-holder">
-                            <span class="show-card-icon"><?php echo htmlspecialchars($show['icon']); ?></span>
+                        <div class="show-img-holder" style="<?php echo $has_img ? 'padding:0; background:none;' : ''; ?>">
+                            <?php if($has_img): ?>
+                                <img src="<?php echo $img_path; ?>" alt="<?php echo htmlspecialchars($show['title']); ?>" style="width:100%;height:100%;object-fit:cover;border-radius:var(--border-radius) var(--border-radius) 0 0;">
+                            <?php else: ?>
+                                <span class="show-card-icon"><?php echo htmlspecialchars($show['icon']); ?></span>
+                            <?php endif; ?>
                             <span class="show-badge">Program</span>
                         </div>
                         <div class="show-body">
@@ -217,7 +224,11 @@ $gallery = get_json_data('gallery.json');
             foreach($featured_services as $srv): 
             ?>
                 <div class="service-summary-card">
-                    <span class="service-icon">✦</span>
+                    <?php 
+                    $fa_icons = ['marketing' => 'fa-chart-line', 'branding' => 'fa-palette', 'social' => 'fa-share-nodes', 'google' => 'fa-google', 'tech' => 'fa-laptop-code', 'reputation' => 'fa-shield-halved', 'startup' => 'fa-rocket'];
+                    $icon_class = $fa_icons[$srv['category']] ?? 'fa-star';
+                    ?>
+                    <span class="service-icon"><i class="fa-solid <?php echo $icon_class; ?>"></i></span>
                     <h3><?php echo htmlspecialchars($srv['title']); ?></h3>
                     <p><?php echo htmlspecialchars($srv['description']); ?></p>
                     <ul>

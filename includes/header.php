@@ -23,9 +23,13 @@ require_once __DIR__ . '/functions.php';
     <!-- Fonts and Icons -->
     <link rel="icon" type="image/png" href="<?php echo IMG_URL; ?>/logo.png">
     
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <!-- Custom CSS stylesheets -->
     <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>/css/animations.css">
+    <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>/css/responsive.css">
     
     <!-- Page Specific Dynamic Styles -->
     <?php if (isset($extra_css)): ?>
