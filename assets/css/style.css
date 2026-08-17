@@ -812,7 +812,7 @@ nav.main-nav {
 
 /* Vertical images grid - auto height to show full portrait */
 .gallery-vertical {
-    grid-auto-rows: auto;
+    grid-auto-rows: 650px;
 }
 
 .gallery-card {
@@ -822,20 +822,11 @@ nav.main-nav {
     cursor: pointer;
 }
 
-/* Horizontal images: fill the row, cover crop is fine */
-.gallery-horizontal .gallery-card img {
+.gallery-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    transition: var(--transition-smooth);
-}
-
-/* Vertical images: show full image, no cropping */
-.gallery-vertical .gallery-card img {
-    width: 100%;
-    height: auto;
-    display: block;
+    object-position: top center;
     transition: var(--transition-smooth);
 }
 
@@ -861,6 +852,9 @@ nav.main-nav {
     .gallery-horizontal {
         grid-auto-rows: 200px;
     }
+    .gallery-vertical {
+        grid-auto-rows: 550px;
+    }
 }
 @media (max-width: 600px) {
     .gallery-grid {
@@ -868,6 +862,9 @@ nav.main-nav {
     }
     .gallery-horizontal {
         grid-auto-rows: 220px;
+    }
+    .gallery-vertical {
+        grid-auto-rows: 500px;
     }
 }
 
