@@ -35,6 +35,22 @@ require_once __DIR__ . '/includes/navbar.php';
                     echo '</div>';
                 }
             }
+            // Load dashboard client uploads
+            if (function_exists('get_merged_json_data')) {
+                $new_clients = get_merged_json_data('clients.json');
+                // The above function merges, but let's just make sure we only print the new ones (since config isn't in new_data by default)
+                // Actually get_merged_json_data merges data/clients.json (if exists) and new_data/clients.json.
+                // Let's just read new_data/clients.json directly to avoid duplicate original ones if they aren't in clients.json
+                $new_path = __DIR__ . '/new_data/clients.json';
+                if (file_exists($new_path)) {
+                    $new_clients = json_decode(file_get_contents($new_path), true) ?: [];
+                    foreach ($new_clients as $nc) {
+                        echo '<div class="client-logo-card">';
+                        echo '<img src="' . SITE_URL . '/new_data/images/clients/' . $nc['filename'] . '" alt="' . htmlspecialchars($nc['name']) . '">';
+                        echo '</div>';
+                    }
+                }
+            }
             ?>
         </div>
         

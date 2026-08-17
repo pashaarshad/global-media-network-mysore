@@ -5,7 +5,7 @@ require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';
 
 // Load services data
-$services = get_json_data('services.json');
+$services = get_merged_json_data('services.json');
 
 // Check if a highlight parameter is present in URL
 $highlight_slug = isset($_GET['highlight']) ? clean($_GET['highlight']) : '';

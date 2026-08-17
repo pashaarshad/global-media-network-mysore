@@ -4,7 +4,7 @@ $page_desc = 'Read verified reviews from schools, resort owners, startups, and b
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';
 
-$testimonials = get_json_data('testimonials.json');
+$testimonials = get_merged_json_data('testimonials.json');
 
 // Handle testimonial posting
 $error_msg = '';

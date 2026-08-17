@@ -357,7 +357,7 @@ nav.main-nav {
 .ticker {
     display: flex;
     white-space: nowrap;
-    animation: marquee 35s linear infinite;
+    animation: marquee 60s linear infinite;
     padding-left: 2rem;
 }
 

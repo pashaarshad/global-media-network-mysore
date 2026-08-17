@@ -5,11 +5,11 @@ require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/navbar.php';
 
 // Load JSON data
-$news_items = get_json_data('news.json');
-$shows = get_json_data('shows.json');
-$services = get_json_data('services.json');
-$testimonials = get_json_data('testimonials.json');
-$gallery = get_json_data('gallery.json');
+$news_items = get_merged_json_data('news.json');
+$shows = get_merged_json_data('shows.json');
+$services = get_merged_json_data('services.json');
+$testimonials = get_merged_json_data('testimonials.json');
+$gallery = get_merged_json_data('gallery.json');
 ?>
 
 <!-- ── 1. HERO BANNER ── -->
@@ -113,7 +113,7 @@ $gallery = get_json_data('gallery.json');
                 <p>Stay informed about important developments, civic activities, public initiatives, and institutional updates.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon"><i class="fa-solid fa-calendar-star" style="color:var(--accent-gold-dark);"></i></span>
+                <span class="card-icon"><i class="fa-solid fa-champagne-glasses" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Events &amp; Celebrations</h3>
                 <p>Discover cultural programmes, conferences, exhibitions, competitions, festivals, and special occasions.</p>
             </div>
@@ -143,7 +143,7 @@ $gallery = get_json_data('gallery.json');
                 <p>Celebrating the rich traditions, traditional art, literature, history, temples, and cultural identity of Mysuru.</p>
             </div>
             <div class="cover-card gold-glow">
-                <span class="card-icon"><i class="fa-solid fa-hands-holding-heart" style="color:var(--accent-gold-dark);"></i></span>
+                <span class="card-icon"><i class="fa-solid fa-people-group" style="color:var(--accent-gold-dark);"></i></span>
                 <h3>Community Stories</h3>
                 <p>Featuring inspiring individuals, social organizations, volunteers, and initiatives creating a positive impact.</p>
             </div>
@@ -259,22 +259,21 @@ $gallery = get_json_data('gallery.json');
             <p class="section-desc">Glimpses of local events, interviews, campus coverages, and scenic Mysore captures.</p>
         </div>
         
-        <div class="gallery-grid reveal">
+        <div class="gallery-grid reveal" style="grid-template-columns: repeat(3, 1fr); grid-auto-rows: 240px;">
             <?php 
-            $gallery_slice = array_slice($gallery, 0, 4);
-            foreach($gallery_slice as $item): 
+            // Show 6 real horizontal gallery images on homepage
+            $gdir = __DIR__ . '/assets/images/gallery/';
+            $gfiles = glob($gdir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+            $shown = 0;
+            foreach ($gfiles as $gf):
+                if ($shown >= 6) break;
+                $gs = getimagesize($gf);
+                if ($gs && $gs[1] > $gs[0]) continue; // skip vertical
+                $gname = basename($gf);
+                $shown++;
             ?>
-                <div class="gallery-card" data-category="<?php echo htmlspecialchars($item['category']); ?>">
-                    <!-- Render dynamic generator image fallback -->
-                    <?php if($item['filename'] === 'mysore_palace_golden.jpg'): ?>
-                        <img src="<?php echo IMG_URL; ?>/hero/mysuru_palace.jpg" alt="<?php echo htmlspecialchars($item['title']); ?>">
-                    <?php else: ?>
-                        <div class="gallery-placeholder">📷</div>
-                    <?php endif; ?>
-                    <div class="gallery-overlay">
-                        <span><?php echo htmlspecialchars($item['category']); ?></span>
-                        <h3><?php echo htmlspecialchars($item['title']); ?></h3>
-                    </div>
+                <div class="gallery-card">
+                    <img src="<?php echo IMG_URL . '/gallery/' . $gname; ?>" alt="Gallery Image" loading="lazy">
                 </div>
             <?php endforeach; ?>
         </div>
@@ -299,11 +298,20 @@ $gallery = get_json_data('gallery.json');
                 $clients_dir = __DIR__ . '/assets/images/clients/';
                 if (is_dir($clients_dir)) {
                     $client_files = glob($clients_dir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
-                    // limit to 8 on homepage to save space if needed, or show all. Let's show all for now since the grid handles it nicely.
                     foreach ($client_files as $file) {
                         $filename = basename($file);
                         echo '<div class="client-logo-card" style="background:#FFF; padding:1rem; border-radius:var(--border-radius); border:var(--border-light); width:100%; height:100px; display:flex; align-items:center; justify-content:center; transition:var(--transition-fast);">';
                         echo '<img src="' . IMG_URL . '/clients/' . $filename . '" alt="Client Logo" style="max-width:100%; max-height:100%; object-fit:contain; transition:0.3s;">';
+                        echo '</div>';
+                    }
+                }
+                // Load dashboard client uploads
+                $new_path = __DIR__ . '/new_data/clients.json';
+                if (file_exists($new_path)) {
+                    $new_clients = json_decode(file_get_contents($new_path), true) ?: [];
+                    foreach ($new_clients as $nc) {
+                        echo '<div class="client-logo-card" style="background:#FFF; padding:1rem; border-radius:var(--border-radius); border:var(--border-light); width:100%; height:100px; display:flex; align-items:center; justify-content:center; transition:var(--transition-fast);">';
+                        echo '<img src="' . SITE_URL . '/new_data/images/clients/' . $nc['filename'] . '" alt="' . htmlspecialchars($nc['name']) . '" style="max-width:100%; max-height:100%; object-fit:contain; transition:0.3s;">';
                         echo '</div>';
                     }
                 }

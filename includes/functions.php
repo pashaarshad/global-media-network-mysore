@@ -17,6 +17,22 @@ function get_json_data(string $filename): array {
 }
 
 /**
+ * Read and merge original JSON data and new_data/ JSON data.
+ */
+function get_merged_json_data(string $filename): array {
+    $original = get_json_data($filename);
+    $new_path = __DIR__ . '/../new_data/' . $filename;
+    if (file_exists($new_path)) {
+        $raw = file_get_contents($new_path);
+        $new_data = json_decode($raw, true);
+        if (is_array($new_data)) {
+            return array_merge($original, $new_data);
+        }
+    }
+    return $original;
+}
+
+/**
  * Write data array to JSON file.
  * Returns true on success, false on failure.
  */

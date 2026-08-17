@@ -47,6 +47,20 @@ $gallery = get_json_data('gallery.json');
                     <img src="<?php echo IMG_URL . '/gallery/' . $filename; ?>" alt="Gallery Image" loading="lazy">
                 </div>
             <?php endforeach; ?>
+
+            <?php
+            // Read dynamic horizontal images uploaded from dashboard
+            $new_path = __DIR__ . '/new_data/gallery.json';
+            if (file_exists($new_path)) {
+                $new_gallery = json_decode(file_get_contents($new_path), true) ?: [];
+                foreach ($new_gallery as $item) {
+                    if ($item['orientation'] !== 'horizontal') continue;
+                    echo '<div class="gallery-card">';
+                    echo '<img src="' . SITE_URL . '/new_data/images/gallery/' . $item['filename'] . '" alt="Gallery Image" loading="lazy">';
+                    echo '</div>';
+                }
+            }
+            ?>
         </div>
 
         <!-- Vertical Images Grid (Below) -->
@@ -74,6 +88,17 @@ $gallery = get_json_data('gallery.json');
                         <img src="<?php echo IMG_URL . '/gallery/' . $filename; ?>" alt="Gallery Image" loading="lazy">
                     </div>
                 <?php endforeach;
+            }
+
+            // Read dynamic vertical images uploaded from dashboard
+            if (file_exists($new_path)) {
+                $new_gallery = json_decode(file_get_contents($new_path), true) ?: [];
+                foreach ($new_gallery as $item) {
+                    if ($item['orientation'] !== 'vertical') continue;
+                    echo '<div class="gallery-card">';
+                    echo '<img src="' . SITE_URL . '/new_data/images/gallery/V/' . $item['filename'] . '" alt="Gallery Image" loading="lazy">';
+                    echo '</div>';
+                }
             }
             ?>
         </div>
