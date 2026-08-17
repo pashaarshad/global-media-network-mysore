@@ -14,6 +14,72 @@ require_once __DIR__ . '/includes/navbar.php';
     </div>
 </section>
 
+<!-- ── 1.5 CLIENT LOGOS GRID ── -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-tag">Our Network</span>
+            <h2 class="section-title">Brands We Work With</h2>
+            <p class="section-desc">We are proud to collaborate with leading businesses and organizations.</p>
+        </div>
+        
+        <div class="client-logos-grid reveal">
+            <?php 
+            $clients_dir = __DIR__ . '/assets/images/clients/';
+            if (is_dir($clients_dir)) {
+                $client_files = glob($clients_dir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+                foreach ($client_files as $file) {
+                    $filename = basename($file);
+                    echo '<div class="client-logo-card">';
+                    echo '<img src="' . IMG_URL . '/clients/' . $filename . '" alt="Client Logo">';
+                    echo '</div>';
+                }
+            }
+            ?>
+        </div>
+        
+        <style>
+        .client-logos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+        }
+        .client-logo-card {
+            background: #FFF;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border: var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            width: 100%;
+            transition: var(--transition-fast);
+        }
+        .client-logo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-gold);
+        }
+        .client-logo-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition-fast);
+        }
+        .client-logo-card:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        </style>
+    </div>
+</section>
+
 <!-- ── 2. SECTOR VERTICALS GRID ── -->
 <section class="section-padding">
     <div class="container">

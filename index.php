@@ -285,6 +285,40 @@ $gallery = get_json_data('gallery.json');
     </div>
 </section>
 
+<!-- ── 8.5 OUR CLIENTS & PARTNERS ── -->
+<section class="section-padding bg-light" style="padding-bottom: 2rem;">
+    <div class="container">
+        <div class="section-header text-center reveal">
+            <span class="section-tag">Trusted By</span>
+            <h2 class="section-title">Our Partners & Clients</h2>
+        </div>
+        
+        <div class="client-logos-marquee reveal">
+            <div class="client-logos-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1.5rem; justify-items: center; align-items: center;">
+                <?php 
+                $clients_dir = __DIR__ . '/assets/images/clients/';
+                if (is_dir($clients_dir)) {
+                    $client_files = glob($clients_dir . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
+                    // limit to 8 on homepage to save space if needed, or show all. Let's show all for now since the grid handles it nicely.
+                    foreach ($client_files as $file) {
+                        $filename = basename($file);
+                        echo '<div class="client-logo-card" style="background:#FFF; padding:1rem; border-radius:var(--border-radius); border:var(--border-light); width:100%; height:100px; display:flex; align-items:center; justify-content:center;">';
+                        echo '<img src="' . IMG_URL . '/clients/' . $filename . '" alt="Client Logo" style="max-width:100%; max-height:100%; object-fit:contain; filter:grayscale(100%); opacity:0.7; transition:0.3s;">';
+                        echo '</div>';
+                    }
+                }
+                ?>
+            </div>
+            <style>
+                .client-logo-card:hover img {
+                    filter: grayscale(0%) !important;
+                    opacity: 1 !important;
+                }
+            </style>
+        </div>
+    </div>
+</section>
+
 <!-- ── 9. TESTIMONIALS CAROUSEL ── -->
 <section class="section-padding bg-light">
     <div class="container">

@@ -33,14 +33,59 @@ $gallery = get_json_data('gallery.json');
         
         <!-- Grid list -->
         <div class="gallery-grid reveal" style="margin-top: 3rem;">
-            <?php foreach($gallery as $item): ?>
-                <div class="gallery-card" data-category="<?php echo htmlspecialchars($item['category']); ?>">
-                    <!-- Using palace generated hero photo as fallback, others as high-end placeholders -->
-                    <?php if($item['filename'] === 'mysore_palace_golden.jpg'): ?>
-                        <img src="<?php echo IMG_URL; ?>/hero/mysuru_palace.jpg" alt="<?php echo htmlspecialchars($item['title']); ?>">
-                    <?php else: ?>
-                        <div class="gallery-placeholder">📷</div>
-                    <?php endif; ?>
+            <?php 
+            // Separate images by orientation
+            $vertical_images = [];
+            $horizontal_images = [];
+            foreach ($gallery as $item) {
+                if ($item['orientation'] === 'vertical') {
+                    $vertical_images[] = $item;
+                } else {
+                    $horizontal_images[] = $item;
+                }
+            }
+
+            // Custom layout logic: blocks of 1 vertical + 4 horizontal
+            $render_items = [];
+            $block_index = 0;
+
+            while (!empty($horizontal_images) && !empty($vertical_images)) {
+                $v = array_shift($vertical_images);
+                // Assign grid placement for the vertical image
+                // Alternate between left (column 1) and right (column 3)
+                $col_start = ($block_index % 2 === 0) ? 1 : 3;
+                $v['grid_style'] = "grid-column: $col_start; grid-row: span 2;";
+                $render_items[] = $v;
+
+                // Take up to 4 horizontals
+                for ($i = 0; $i < 4; $i++) {
+                    if (!empty($horizontal_images)) {
+                        $h = array_shift($horizontal_images);
+                        $h['grid_style'] = "grid-column: span 1; grid-row: span 1;";
+                        $render_items[] = $h;
+                    }
+                }
+                $block_index++;
+            }
+
+            // If we have remaining horizontal images, display them normally
+            while (!empty($horizontal_images)) {
+                $h = array_shift($horizontal_images);
+                $h['grid_style'] = "grid-column: span 1; grid-row: span 1;";
+                $render_items[] = $h;
+            }
+
+            // If we have remaining vertical images, display them spanning 2 rows
+            while (!empty($vertical_images)) {
+                $v = array_shift($vertical_images);
+                $v['grid_style'] = "grid-column: span 1; grid-row: span 2;";
+                $render_items[] = $v;
+            }
+
+            foreach($render_items as $item): 
+            ?>
+                <div class="gallery-card <?php echo $item['orientation']; ?>" data-category="<?php echo htmlspecialchars($item['category']); ?>" style="<?php echo $item['grid_style']; ?>">
+                    <img src="<?php echo IMG_URL . '/gallery/' . $item['filename']; ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" style="width: 100%; height: 100%; object-fit: cover;">
                     <div class="gallery-overlay">
                         <span><?php echo htmlspecialchars($item['category']); ?></span>
                         <h3><?php echo htmlspecialchars($item['title']); ?></h3>
@@ -48,6 +93,31 @@ $gallery = get_json_data('gallery.json');
                 </div>
             <?php endforeach; ?>
         </div>
+        
+        <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 250px;
+            gap: 1.5rem;
+            grid-auto-flow: dense; /* Fill gaps automatically */
+        }
+        
+        @media (max-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .gallery-card {
+                grid-column: span 1 !important;
+                grid-row: span 1 !important;
+            }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        </style>
     </div>
 </section>
 
