@@ -68,13 +68,10 @@ require_once __DIR__ . '/includes/navbar.php';
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
-            filter: grayscale(100%);
-            opacity: 0.7;
             transition: var(--transition-fast);
         }
         .client-logo-card:hover img {
-            filter: grayscale(0%);
-            opacity: 1;
+            transform: scale(1.1);
         }
         </style>
     </div>

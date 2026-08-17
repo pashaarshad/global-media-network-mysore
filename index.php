@@ -302,17 +302,21 @@ $gallery = get_json_data('gallery.json');
                     // limit to 8 on homepage to save space if needed, or show all. Let's show all for now since the grid handles it nicely.
                     foreach ($client_files as $file) {
                         $filename = basename($file);
-                        echo '<div class="client-logo-card" style="background:#FFF; padding:1rem; border-radius:var(--border-radius); border:var(--border-light); width:100%; height:100px; display:flex; align-items:center; justify-content:center;">';
-                        echo '<img src="' . IMG_URL . '/clients/' . $filename . '" alt="Client Logo" style="max-width:100%; max-height:100%; object-fit:contain; filter:grayscale(100%); opacity:0.7; transition:0.3s;">';
+                        echo '<div class="client-logo-card" style="background:#FFF; padding:1rem; border-radius:var(--border-radius); border:var(--border-light); width:100%; height:100px; display:flex; align-items:center; justify-content:center; transition:var(--transition-fast);">';
+                        echo '<img src="' . IMG_URL . '/clients/' . $filename . '" alt="Client Logo" style="max-width:100%; max-height:100%; object-fit:contain; transition:0.3s;">';
                         echo '</div>';
                     }
                 }
                 ?>
             </div>
             <style>
+                .client-logo-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: var(--shadow-md);
+                    border-color: var(--accent-gold);
+                }
                 .client-logo-card:hover img {
-                    filter: grayscale(0%) !important;
-                    opacity: 1 !important;
+                    transform: scale(1.1);
                 }
             </style>
         </div>

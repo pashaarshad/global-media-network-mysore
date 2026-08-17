@@ -10,24 +10,6 @@
     },
     {
         "id": 2,
-        "title": "Behind the Scenes Prime 9",
-        "category": "prime9",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.50 PM.jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 3,
-        "title": "Dasara Cultural Programme",
-        "category": "events",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.51 PM (1).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 4,
         "title": "Mysore Business Summit",
         "category": "business",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.51 PM.jpeg",
@@ -36,7 +18,7 @@
         "orientation": "horizontal"
     },
     {
-        "id": 5,
+        "id": 3,
         "title": "Campus Crew College Fest",
         "category": "campus",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.52 PM (1).jpeg",
@@ -45,7 +27,16 @@
         "orientation": "horizontal"
     },
     {
-        "id": 6,
+        "id": 4,
+        "title": "Behind the Scenes Prime 9",
+        "category": "prime9",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.50 PM.jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 5,
         "title": "Chamundi Hill Darshana",
         "category": "culture",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.52 PM (2).jpeg",
@@ -54,13 +45,22 @@
         "orientation": "horizontal"
     },
     {
-        "id": 7,
+        "id": 6,
         "title": "Breaking News Editorial",
         "category": "news",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.52 PM (3).jpeg",
         "width": 1280,
         "height": 960,
         "orientation": "horizontal"
+    },
+    {
+        "id": 7,
+        "title": "Dasara Cultural Programme",
+        "category": "events",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.51 PM (1).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
     },
     {
         "id": 8,
@@ -73,42 +73,6 @@
     },
     {
         "id": 9,
-        "title": "Mysuru Youth Festival",
-        "category": "events",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.53 PM (1).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 10,
-        "title": "Local Entrepreneur Meetup",
-        "category": "business",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.53 PM (2).jpeg",
-        "width": 746,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 11,
-        "title": "Student Interactive Session",
-        "category": "campus",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.53 PM.jpeg",
-        "width": 1200,
-        "height": 1600,
-        "orientation": "vertical"
-    },
-    {
-        "id": 12,
-        "title": "Traditional Mysore Artistry",
-        "category": "culture",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.54 PM (1).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 13,
         "title": "Civic Administration Meet",
         "category": "news",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.54 PM (2).jpeg",
@@ -117,43 +81,16 @@
         "orientation": "horizontal"
     },
     {
-        "id": 14,
-        "title": "Talk Show Set Interview",
-        "category": "prime9",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.54 PM (3).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 15,
-        "title": "Regional Art Exhibition",
+        "id": 10,
+        "title": "Mysuru Youth Festival",
         "category": "events",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.54 PM.jpeg",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.53 PM (1).jpeg",
         "width": 720,
         "height": 1280,
         "orientation": "vertical"
     },
     {
-        "id": 16,
-        "title": "Product Launch Event",
-        "category": "business",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.55 PM (1).jpeg",
-        "width": 900,
-        "height": 1600,
-        "orientation": "vertical"
-    },
-    {
-        "id": 17,
-        "title": "Academic Excellence Awards",
-        "category": "campus",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.55 PM (2).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 18,
+        "id": 11,
         "title": "Heritage Palace Lighting",
         "category": "culture",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.55 PM.jpeg",
@@ -162,61 +99,7 @@
         "orientation": "horizontal"
     },
     {
-        "id": 19,
-        "title": "Public Interest Reporting",
-        "category": "news",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM (1).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 20,
-        "title": "Anchor Briefing Room",
-        "category": "prime9",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM (2).jpeg",
-        "width": 960,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 21,
-        "title": "Community Sports Meet",
-        "category": "events",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM (3).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 22,
-        "title": "Sponsor Brand Feature",
-        "category": "business",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM.jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 23,
-        "title": "University Seminar Hall",
-        "category": "campus",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.57 PM (1).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 24,
-        "title": "Folk Dance Performance",
-        "category": "culture",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.57 PM (2).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 25,
+        "id": 12,
         "title": "Live Broadcast Setup",
         "category": "news",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.57 PM.jpeg",
@@ -225,16 +108,16 @@
         "orientation": "horizontal"
     },
     {
-        "id": 26,
-        "title": "Studio Camera Setup",
-        "category": "prime9",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.58 PM (1).jpeg",
-        "width": 720,
+        "id": 13,
+        "title": "Local Entrepreneur Meetup",
+        "category": "business",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.53 PM (2).jpeg",
+        "width": 746,
         "height": 1280,
         "orientation": "vertical"
     },
     {
-        "id": 27,
+        "id": 14,
         "title": "Awards Ceremony Night",
         "category": "events",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.58 PM (2).jpeg",
@@ -243,25 +126,7 @@
         "orientation": "horizontal"
     },
     {
-        "id": 28,
-        "title": "Retail Space Promotion",
-        "category": "business",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.58 PM (3).jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 29,
-        "title": "Youth Culture Feature",
-        "category": "campus",
-        "filename": "WhatsApp Image 2026-08-16 at 5.19.58 PM.jpeg",
-        "width": 720,
-        "height": 1280,
-        "orientation": "vertical"
-    },
-    {
-        "id": 30,
+        "id": 15,
         "title": "Cultural Festival Prep",
         "category": "culture",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.59 PM (1).jpeg",
@@ -270,7 +135,16 @@
         "orientation": "horizontal"
     },
     {
-        "id": 31,
+        "id": 16,
+        "title": "Student Interactive Session",
+        "category": "campus",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.53 PM.jpeg",
+        "width": 1200,
+        "height": 1600,
+        "orientation": "vertical"
+    },
+    {
+        "id": 17,
         "title": "Media Briefing Session",
         "category": "news",
         "filename": "WhatsApp Image 2026-08-16 at 5.19.59 PM.jpeg",
@@ -279,7 +153,7 @@
         "orientation": "horizontal"
     },
     {
-        "id": 32,
+        "id": 18,
         "title": "Broadcast Operations Control",
         "category": "prime9",
         "filename": "WhatsApp Image 2026-08-16 at 6.20.27 PM.jpeg",
@@ -288,7 +162,16 @@
         "orientation": "horizontal"
     },
     {
-        "id": 33,
+        "id": 19,
+        "title": "Traditional Mysore Artistry",
+        "category": "culture",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.54 PM (1).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 20,
         "title": "Local Heritage Walk",
         "category": "events",
         "filename": "WhatsApp Image 2026-08-16 at 6.20.28 PM.jpeg",
@@ -297,22 +180,139 @@
         "orientation": "horizontal"
     },
     {
-        "id": 34,
-        "title": "Startup Pitch Session",
-        "category": "business",
-        "filename": "WhatsApp Image 2026-08-16 at 6.20.29 PM (1).jpeg",
-        "width": 711,
-        "height": 1390,
-        "orientation": "vertical"
-    },
-    {
-        "id": 35,
+        "id": 21,
         "title": "Campus Interview Segment",
         "category": "campus",
         "filename": "WhatsApp Image 2026-08-16 at 6.20.29 PM.jpeg",
         "width": 1600,
         "height": 1200,
         "orientation": "horizontal"
+    },
+    {
+        "id": 22,
+        "title": "Talk Show Set Interview",
+        "category": "prime9",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.54 PM (3).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 23,
+        "title": "Regional Art Exhibition",
+        "category": "events",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.54 PM.jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 24,
+        "title": "Product Launch Event",
+        "category": "business",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.55 PM (1).jpeg",
+        "width": 900,
+        "height": 1600,
+        "orientation": "vertical"
+    },
+    {
+        "id": 25,
+        "title": "Academic Excellence Awards",
+        "category": "campus",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.55 PM (2).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 26,
+        "title": "Public Interest Reporting",
+        "category": "news",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM (1).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 27,
+        "title": "Anchor Briefing Room",
+        "category": "prime9",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM (2).jpeg",
+        "width": 960,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 28,
+        "title": "Community Sports Meet",
+        "category": "events",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM (3).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 29,
+        "title": "Sponsor Brand Feature",
+        "category": "business",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.56 PM.jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 30,
+        "title": "University Seminar Hall",
+        "category": "campus",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.57 PM (1).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 31,
+        "title": "Folk Dance Performance",
+        "category": "culture",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.57 PM (2).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 32,
+        "title": "Studio Camera Setup",
+        "category": "prime9",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.58 PM (1).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 33,
+        "title": "Retail Space Promotion",
+        "category": "business",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.58 PM (3).jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 34,
+        "title": "Youth Culture Feature",
+        "category": "campus",
+        "filename": "WhatsApp Image 2026-08-16 at 5.19.58 PM.jpeg",
+        "width": 720,
+        "height": 1280,
+        "orientation": "vertical"
+    },
+    {
+        "id": 35,
+        "title": "Startup Pitch Session",
+        "category": "business",
+        "filename": "WhatsApp Image 2026-08-16 at 6.20.29 PM (1).jpeg",
+        "width": 711,
+        "height": 1390,
+        "orientation": "vertical"
     },
     {
         "id": 36,
