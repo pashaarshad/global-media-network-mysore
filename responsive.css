@@ -29,7 +29,7 @@
     }
 
     .testimonials-slider {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .footer-grid {
@@ -205,9 +205,27 @@
         height: auto;
     }
 
-    /* Testimonials → 1 col */
+    /* Testimonials → Native CSS Swipe Slider (acts like Swiper JS) */
     .testimonials-slider {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 1.5rem !important;
+        padding: 1rem 0.5rem 2rem 0.5rem !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        scrollbar-width: none; /* Hide default scrollbar on Firefox */
+    }
+
+    .testimonials-slider::-webkit-scrollbar {
+        display: none; /* Hide default scrollbar on Safari/Chrome */
+    }
+
+    .testimonials-slider .testimonial-card {
+        flex: 0 0 100% !important;
+        scroll-snap-align: start !important;
+        box-shadow: var(--shadow-md) !important;
+        margin: 0 !important;
     }
 
     /* Footer → 1 col, fix overflow */

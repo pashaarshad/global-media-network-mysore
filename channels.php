@@ -92,6 +92,7 @@ $shows = get_json_data('shows.json');
                             <a href="<?php echo SITE_URL; ?>/contact.php?path=business&show=<?php echo urlencode($show['title']); ?>" class="btn btn-primary btn-sm">Sponsor This Segment</a>
                         </div>
                     </div>
+                </div>
             <?php endforeach; ?>
         </div>
     </div>
