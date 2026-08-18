@@ -20,17 +20,7 @@ $gallery = get_json_data('gallery.json');
 <!-- ── 2. GALLERY DOCK ── -->
 <section class="section-padding">
     <div class="container">
-        <!-- Filter Tabs -->
-        <div class="gallery-filter-bar reveal">
-            <button class="filter-btn active" data-filter="all">All Photos</button>
-            <button class="filter-btn" data-filter="news">News Coverage</button>
-            <button class="filter-btn" data-filter="prime9">Prime 9 Shows</button>
-            <button class="filter-btn" data-filter="events">Events &amp; festivals</button>
-            <button class="filter-btn" data-filter="business">Business spotlights</button>
-            <button class="filter-btn" data-filter="campus">Campus crew</button>
-            <button class="filter-btn" data-filter="culture">Culture &amp; Heritage</button>
-        </div>
-        
+        <!-- Gallery Grid -->
         <!-- Horizontal Images Grid (Top) -->
         <div class="gallery-grid gallery-horizontal reveal" style="margin-top: 3rem;">
             <?php 
