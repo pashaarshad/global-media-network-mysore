@@ -5,7 +5,14 @@
 
 define('SITE_NAME',    'Global Media Network Mysore');
 define('SITE_TAGLINE', 'Connecting Mysore. Informing Communities. Inspiring the World.');
-define('SITE_URL',     'http://localhost/global-media-network-mysore');
+// Dynamically detect domain / protocol (works on localhost/XAMPP and Hostinger out of the box)
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || ($_SERVER['SERVER_PORT'] ?? 80) == 443) ? "https://" : "http://";
+$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+if (strpos($host, 'localhost') !== false || $host === '127.0.0.1') {
+    define('SITE_URL', $protocol . $host . '/global-media-network-mysore');
+} else {
+    define('SITE_URL', $protocol . $host);
+}
 define('SITE_EMAIL',   'info@globalmedianetworkmysore.com');
 define('SITE_PHONE',   '+91 821 4565100');
 define('SITE_PHONE2',  '+91 471 4050100');

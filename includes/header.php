@@ -27,9 +27,9 @@ require_once __DIR__ . '/functions.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom CSS stylesheets -->
-    <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>/css/style.css">
-    <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>/css/animations.css">
-    <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>/css/responsive.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="responsive.css">
     
     <!-- Page Specific Dynamic Styles -->
     <?php if (isset($extra_css)): ?>

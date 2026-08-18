@@ -81,6 +81,6 @@
 </footer>
 
 <!-- Core JS scripts -->
-<script src="<?php echo ASSETS_URL; ?>/js/main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
