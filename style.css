@@ -392,7 +392,7 @@ nav.main-nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(3, 11, 22, 0.6), rgba(3, 11, 22, 0.95)), url('../images/hero/mysuru_palace.jpg');
+    background: linear-gradient(to bottom, rgba(3, 11, 22, 0.6), rgba(3, 11, 22, 0.95)), url('assets/images/hero/mysuru_palace.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
