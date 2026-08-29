@@ -1,0 +1,407 @@
+<?php
+// ============================================================
+// Global Media Network Mysore — Static Services Data Cache
+// ============================================================
+
+function get_static_services(): array {
+    return [
+        [
+            "id" => 1,
+            "category" => "marketing",
+            "title" => "Advertising & Analytics",
+            "tagline" => "Turn every ad into an opportunity with data-driven campaigns.",
+            "description" => "We combine smart advertising across channels with robust web analytics to reach, engage, and convert your ideal audience, ensuring every marketing rupee is accounted for.",
+            "items" => [
+                "Meta Ads Management (Facebook & Instagram)",
+                "Google Ads Management (Search, Display, Performance Max)",
+                "YouTube Ads & Video Campaigns",
+                "LinkedIn Ads Management for B2B",
+                "Display Ads & Remarketing Campaigns",
+                "Lead Generation & App Install Campaigns",
+                "Conversion Tracking Setup & Analytics Audit",
+                "Google Analytics 4 (GA4) & Google Tag Manager Setup",
+                "Monthly Performance Reports & Marketing Dashboards"
+            ]
+        ],
+        [
+            "id" => 2,
+            "category" => "branding",
+            "title" => "Branding & Business Identity",
+            "tagline" => "Build a brand that people recognize, remember, and trust.",
+            "description" => "From defining your brand vision and designing premium logos to creating cohesive business stationery, profiles, and style guidelines, we establish your professional market identity.",
+            "items" => [
+                "Premium Logo Design & Visual Identity",
+                "Complete Brand Style Guidelines & Fonts",
+                "Business Cards & Corporate Letterheads",
+                "Brochure & Leaflet Design",
+                "Professional Company Profiles & Presentations",
+                "Product Catalogues & Packaging Design",
+                "Social Media Brand Kits & Strategy Consultation"
+            ]
+        ],
+        [
+            "id" => 3,
+            "category" => "branding",
+            "title" => "Content Creation",
+            "tagline" => "Great content captures attention, builds trust, and drives action.",
+            "description" => "Engage your digital audience with creative, purposeful content. We write copy, schedule posts, and design custom visuals that keep your audience connected.",
+            "items" => [
+                "Social Media Posters & Custom Creatives",
+                "Multi-slide Carousel Posts & Infographics",
+                "Festival & Occasion-based Creatives",
+                "Copywriting for Blogs, Websites, & Ads",
+                "Product Descriptions & Caption Writing",
+                "Monthly Content Calendar & Strategic Planning"
+            ]
+        ],
+        [
+            "id" => 4,
+            "category" => "marketing",
+            "title" => "Digital Marketing Packages",
+            "tagline" => "Integrated online marketing strategies built for growth.",
+            "description" => "Take your business further with our tailored digital marketing packages, combining SEO, social media, paid ads, and content strategy for compounding digital visibility.",
+            "items" => [
+                "Digital Marketing Starter (Foundational SEO & Socials)",
+                "Digital Marketing Growth (Adds Performance Ads & Email)",
+                "Digital Marketing Professional (Deep Analytics & Retargeting)",
+                "Digital Marketing Enterprise (Full-scale Automation & Dedicated Support)"
+            ]
+        ],
+        [
+            "id" => 5,
+            "category" => "tech",
+            "title" => "E-Commerce Solutions",
+            "tagline" => "Transform products into seamless online shopping experiences.",
+            "description" => "We help you set up Shopify or WooCommerce store environments, integrate payment and shipping systems, optimize product catalogs, and run converting e-commerce ad campaigns.",
+            "items" => [
+                "E-Commerce Consultation & Platform Selection",
+                "Shopify & WooCommerce Store Setup",
+                "Product Catalog Upload & Management",
+                "Payment Gateway & Shipping Carrier Integration",
+                "WhatsApp Shopping & Cart Recovery Integration",
+                "E-Commerce Search Engine Optimization & Paid Ads"
+            ]
+        ],
+        [
+            "id" => 6,
+            "category" => "social",
+            "title" => "Facebook & Meta Optimization",
+            "tagline" => "Turn Facebook and Meta into powerful acquisition channels.",
+            "description" => "Establish a strong business profile, manage Meta Business Suite, execute paid ads, deploy Pixel & Conversion API tracking, and run organic page campaigns.",
+            "items" => [
+                "Facebook Business Page & Manager Setup",
+                "Meta Business Suite Configuration",
+                "Meta Pixel & Conversions API Setup",
+                "Targeted Facebook & Instagram Ads",
+                "Lead Generation & Retargeting Funnels",
+                "Organic Page Engagement Management"
+            ]
+        ],
+        [
+            "id" => 7,
+            "category" => "google",
+            "title" => "Google Services",
+            "tagline" => "Be visible when potential customers are actively searching.",
+            "description" => "Rank locally, manage customer reviews, configure Google Search Console, deploy Google Tag Manager, run Google Search ads, and track everything in Looker Studio.",
+            "items" => [
+                "Google Business Profile (GBP) Creation & Verification",
+                "GBP Optimization & Local Ranking Campaigns",
+                "Review Generation & Response Management",
+                "Google Search, Display, & Performance Max Ads",
+                "Google Merchant Center & Shopping Ads Setup",
+                "Looker Studio Performance Dashboards"
+            ]
+        ],
+        [
+            "id" => 8,
+            "category" => "tech",
+            "title" => "Hosting & Website Maintenance",
+            "tagline" => "Keep your website secure, fast, and available 24/7.",
+            "description" => "Leave server configurations, domain renewals, SSL installations, daily backups, WordPress core updates, security monitoring, and server migrations to our technical experts.",
+            "items" => [
+                "Domain Registration & Cloud Hosting Setup",
+                "Secure Business Email Setup",
+                "SSL Certificate Installation & Monitoring",
+                "Regular WordPress Theme & Plugin Updates",
+                "Security Audits, Malware Scanning, & Daily Backups",
+                "Fast Server & Website Migrations"
+            ]
+        ],
+        [
+            "id" => 9,
+            "category" => "social",
+            "title" => "Instagram Marketing",
+            "tagline" => "Turn your Instagram presence into an engaging digital showcase.",
+            "description" => "Optimize your profile bio, manage daily posts and Reels, implement hashtag strategies, launch influencer campaigns, and run conversion-oriented Instagram ads.",
+            "items" => [
+                "Profile Bio & Highlights Optimization",
+                "Content Planning, Story & Feed Posting",
+                "Reels Production, Audio Syncing & Posting",
+                "Targeted Instagram Growth Ads",
+                "Influencer Campaign Setup & Management",
+                "Instagram Account Health & Competitor Audits"
+            ]
+        ],
+        [
+            "id" => 10,
+            "category" => "tech",
+            "title" => "Jobs & Recruitment Marketing",
+            "tagline" => "Find the right talent through modern digital hiring campaigns.",
+            "description" => "Strengthen your employer brand, build recruitment landing pages, run candidate lead campaigns on LinkedIn and social channels, and draft compelling hiring visuals.",
+            "items" => [
+                "Job Campaign Planning & Employer Branding Strategy",
+                "LinkedIn Recruitment Ads & Campaign Management",
+                "Social Media Candidate Lead Generation",
+                "WhatsApp & SMS Recruitment Flows",
+                "Creative Job Post Graphics & Video Job Descriptions",
+                "Recruitment Landing Page Design & Funnels"
+            ]
+        ],
+        [
+            "id" => 11,
+            "category" => "marketing",
+            "title" => "Keyword & SEO Research",
+            "tagline" => "Understand what your customers are searching for online.",
+            "description" => "Discover high-value search terms, analyze competitors' SEO rankings, perform technical audits, and create search engine optimization action plans for your developers.",
+            "items" => [
+                "In-Depth Industry Keyword Research",
+                "Competitor SEO Analysis & Content Gaps",
+                "Technical Website Audits & Speed Reports",
+                "Local Search Keyword Target Maps",
+                "Content Keyword Mapping & Header Structure Guide"
+            ]
+        ],
+        [
+            "id" => 12,
+            "category" => "marketing",
+            "title" => "Lead Generation",
+            "tagline" => "Convert passive online interest into qualified sales leads.",
+            "description" => "We construct multi-step landing pages, run conversion ads, integrate CRMs to store customer data, configure autoresponders, and automate lead-qualification processes.",
+            "items" => [
+                "High-Converting Landing Page Design",
+                "Meta & Google Lead Form Campaigns",
+                "Multi-Step Qualification Survey Funnels",
+                "CRM Integration (HubSpot, Zoho, Google Sheets)",
+                "Autoresponder Setup (Instant SMS/Email/WhatsApp)",
+                "Lead Nurturing Campaign Sequences"
+            ]
+        ],
+        [
+            "id" => 13,
+            "category" => "marketing",
+            "title" => "Marketing Automation",
+            "tagline" => "Save time, scale processes, and simplify client journeys.",
+            "description" => "Implement automated flows to qualify incoming leads, sync databases, send abandoned cart emails, dispatch automated newsletters, and orchestrate customer outreach.",
+            "items" => [
+                "Lead Capture & CRM Sync Automation",
+                "WhatsApp & Email Cart Abandonment Triggers",
+                "Automated Newsletter & Welcome Series",
+                "Appointment Booking & Reminder Workflows",
+                "Sales Pipeline Automation & Lead Scoring"
+            ]
+        ],
+        [
+            "id" => 14,
+            "category" => "reputation",
+            "title" => "News & PR Services",
+            "tagline" => "Build authority and visibility with targeted media outreach.",
+            "description" => "Write and distribute professional press releases to major regional and digital news portals. Establish thought leadership for founders and secure digital media features.",
+            "items" => [
+                "Press Release Drafting & Editorial Support",
+                "Regional & Digital News Portal Distribution",
+                "Executive & Founder Branding Campaigns",
+                "Sponsored Stories & Online Press Releases",
+                "Brand Reputation & News Integration Strategies"
+            ]
+        ],
+        [
+            "id" => 15,
+            "category" => "reputation",
+            "title" => "Online Reputation Management",
+            "tagline" => "Protect, monitor, and build your digital brand value.",
+            "description" => "Manage business reviews on Google and social media, craft crisis communications, respond to negative reviews professionally, and monitor competitor reputation profiles.",
+            "items" => [
+                "Google Review Campaign & Review Link Generation",
+                "Negative Review Analysis & Response Strategies",
+                "Brand Mention Monitoring & Crisis Mitigation",
+                "Customer Satisfaction Surveys & NPS Tracking",
+                "Competitor Reputation Audits & Benchmarking"
+            ]
+        ],
+        [
+            "id" => 16,
+            "category" => "marketing",
+            "title" => "Performance Marketing",
+            "tagline" => "Accelerate growth through conversion-centered campaigns.",
+            "description" => "For businesses ready to scale, our performance marketing packages focus entirely on measurable targets, returns on ad spend (ROAS), and systematic growth tests.",
+            "items" => [
+                "Performance Starter (Ad Spend Setup, Optimization)",
+                "Performance Growth (A/B Testing, Multi-channel Ads)",
+                "Performance Professional (Lookalike Audiences, Custom Conversions)",
+                "Performance Enterprise (Full Funnel Retargeting, GA4 Auditing)"
+            ]
+        ],
+        [
+            "id" => 17,
+            "category" => "tech",
+            "title" => "QR & Digital Assets",
+            "tagline" => "Bridge the gap between offline and online touchpoints.",
+            "description" => "Create interactive dynamic QR codes for restaurants, digital visiting cards for sales teams, link-in-bio portals for influencers, and mobile-friendly digital menus.",
+            "items" => [
+                "Dynamic & Styled QR Codes with Analytics",
+                "Premium Digital Business Cards (vCard Setup)",
+                "Digital Menu & Catalogues for Shops/Restaurants",
+                "Customized Link-in-Bio Landing Pages",
+                "WhatsApp QR Campaign QR Generators"
+            ]
+        ],
+        [
+            "id" => 18,
+            "category" => "branding",
+            "title" => "Reels & Video Production",
+            "tagline" => "Tell your business story through high-impact video content.",
+            "description" => "Capture the essence of your business, shoot cinematic product reels, design explainer animations, capture events, and edit vertical videos designed to go viral.",
+            "items" => [
+                "Short-form Video & Reels Editing",
+                "Corporate Promo Videos & Brand Introductions",
+                "Product Videography & Shoot Direction",
+                "Professional Drone Footage & Aerial Shoots",
+                "YouTube Video Post-Production & Sound Design"
+            ]
+        ],
+        [
+            "id" => 19,
+            "category" => "marketing",
+            "title" => "Search Engine Optimization (SEO)",
+            "tagline" => "Rank on Google, attract organic traffic, and secure leads.",
+            "description" => "Optimizing website architecture, generating keyword-optimized articles, correcting technical errors, and earning high-authority links to secure top organic listings.",
+            "items" => [
+                "On-Page SEO (Meta tags, Headers, Content Optimization)",
+                "Technical SEO (Schema markup, Sitemap, Robots, Speed)",
+                "Off-Page Link Building & Citation Management",
+                "Local SEO Campaigns & Map Rankings"
+            ]
+        ],
+        [
+            "id" => 20,
+            "category" => "tech",
+            "title" => "Training & Consultations",
+            "tagline" => "Empower your team with in-demand digital strategies.",
+            "description" => "We offer structured corporate marketing workshops, personal business audits, custom strategies, and training programs on modern digital channels and AI marketing.",
+            "items" => [
+                "1-on-1 Marketing Audits & Strategy Consulting",
+                "1-Day Corporate Digital Marketing Bootcamps",
+                "AI Tools & Automation Integration Workshops",
+                "SEO & Analytics Training Sessions for Teams"
+            ]
+        ],
+        [
+            "id" => 21,
+            "category" => "branding",
+            "title" => "UI/UX & Website Design",
+            "tagline" => "Design stunning digital platforms focused on user journeys.",
+            "description" => "Create intuitive visual flows, responsive page layouts, Figma mockups, landing page designs, and application dashboard mockups before coding begins.",
+            "items" => [
+                "Figma Landing Page & Website Mockup Design",
+                "UX Usability Audits & Redesign Proposals",
+                "Responsive Layout Designs for Mobile & Desktop",
+                "Dashboard UI & Mobile App Screens Layout"
+            ]
+        ],
+        [
+            "id" => 22,
+            "category" => "branding",
+            "title" => "Video Marketing",
+            "tagline" => "Educate, engage, and inspire action with professional video.",
+            "description" => "Plan scripting, voiceover, storyboarding, and video marketing distribution channels for school tours, business promotions, testimonials, and explainer animations.",
+            "items" => [
+                "YouTube Channel Video Content Strategy",
+                "Video Scriptwriting & Storyboard Consulting",
+                "Voiceover Sourcing & Video Music Licensing",
+                "Video Distribution & Ad Campaign Setup"
+            ]
+        ],
+        [
+            "id" => 23,
+            "category" => "social",
+            "title" => "WhatsApp Marketing Solutions",
+            "tagline" => "Connect directly with customers where they read messages.",
+            "description" => "Configure WhatsApp Business App, deploy official WhatsApp Business API, write broadcast templates, establish automation chatbots, and integrate CRM portals.",
+            "items" => [
+                "WhatsApp Business Setup & Profile Polish",
+                "WhatsApp Business API Verification Assistance",
+                "API Template Writing & Broadcasting Setup",
+                "Automated Interactive Chatbots (FAQ Triggers)",
+                "WhatsApp CRM & Live Chat Integration"
+            ]
+        ],
+        [
+            "id" => 24,
+            "category" => "social",
+            "title" => "X (Twitter) Marketing",
+            "tagline" => "Build authority and engage in real-time conversations.",
+            "description" => "Manage profiles, run campaigns, design engaging tweets, establish thought leadership threads, and execute target audience engagement campaigns.",
+            "items" => [
+                "X Profile Branding & Bio Architecture",
+                "Topic Thread Crafting & Authority Building",
+                "Real-time News & Engagement Strategy",
+                "X Ads Campaign Launch & Optimization"
+            ]
+        ],
+        [
+            "id" => 25,
+            "category" => "social",
+            "title" => "YouTube Channel Management",
+            "tagline" => "Grow your audience on the largest video search platform.",
+            "description" => "We optimize titles, description SEO, tags, design clickable custom thumbnails, manage playlist groupings, edit videos, and run targeted YouTube growth campaigns.",
+            "items" => [
+                "YouTube Channel Setup & Optimization",
+                "Clickable Custom Thumbnail Design",
+                "YouTube SEO (Titles, Descriptions, Tags)",
+                "Shorts Management & Audio Syncing",
+                "YouTube Ads (Pre-roll, In-feed) Management"
+            ]
+        ],
+        [
+            "id" => 26,
+            "category" => "startup",
+            "title" => "Zero-to-Growth Setup",
+            "tagline" => "Complete digital launchpad package for modern startups.",
+            "description" => "Everything your new business needs to establish a premium digital footprint within weeks: custom logo, starter landing page, social media handles, GBP, and basic ad setups.",
+            "items" => [
+                "Logo & Core Brand Palette Selection",
+                "Fast Starter Landing Page or Website Design",
+                "Instagram, Facebook, & LinkedIn Setup",
+                "Google Business Profile (GBP) & Map Configuration",
+                "Google Analytics 4 & Search Console Verification",
+                "WhatsApp Business Integration & Starter Poster Kits"
+            ]
+        ],
+        [
+            "id" => 27,
+            "category" => "branding",
+            "title" => "Brand My Business",
+            "tagline" => "Your Business. Your Identity. Your Growth.",
+            "description" => "Brand My Business is a business-focused segment created to help entrepreneurs, startups, local businesses, and growing brands strengthen their identity and reach the right audience. We showcase the story behind the business, its products and services, unique strengths, customer value, and growth journey through engaging digital content and strategic promotion.",
+            "items" => [
+                "Build Your Identity",
+                "Showcase Your Strength",
+                "Grow Your Brand"
+            ]
+        ],
+        [
+            "id" => 28,
+            "category" => "branding",
+            "title" => "The Nation Skill",
+            "tagline" => "Learn. Empower. Achieve.",
+            "description" => "The Nation Skill is a career and empowerment initiative designed to connect students, women, and children with practical learning, skill development, career opportunities, and meaningful activities. Through training programmes, employment awareness, empowerment initiatives, and engaging learning experiences, we aim to help individuals build confidence, discover opportunities, and prepare for a stronger future.",
+            "items" => [
+                "Job Requirements: Stay updated with employment opportunities, industry expectations, required skills, recruitment trends, and career pathways.",
+                "Student Training: Practical training programmes focused on employability, communication, technology, career readiness, professional skills, and personal development.",
+                "Women Empowerment: Empowering women through skill development, entrepreneurship awareness, career guidance, digital literacy, and opportunities for personal and professional growth.",
+                "Children Activities: Creative, educational, and skill-building activities designed to encourage curiosity, confidence, teamwork, and learning beyond the classroom.",
+                "Building Skills. Creating Opportunities. Empowering the Nation."
+            ]
+        ]
+    ];
+}

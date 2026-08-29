@@ -9,6 +9,10 @@
  * Returns empty array if file missing or malformed.
  */
 function get_json_data(string $filename): array {
+    if ($filename === 'services.json') {
+        require_once __DIR__ . '/static_services.php';
+        return get_static_services();
+    }
     $path = DATA_DIR . $filename;
     if (!file_exists($path)) return [];
     $raw = file_get_contents($path);

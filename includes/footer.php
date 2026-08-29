@@ -79,6 +79,6 @@
 </footer>
 
 <!-- Core JS scripts -->
-<script src="main.js"></script>
+<script src="main.js?v=1.1"></script>
 </body>
 </html>

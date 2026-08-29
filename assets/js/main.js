@@ -160,5 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
         }
+
+        // Initialize state on page load
+        filterServices();
     }
 });

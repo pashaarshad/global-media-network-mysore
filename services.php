@@ -194,7 +194,7 @@ $highlight_slug = isset($_GET['highlight']) ? clean($_GET['highlight']) : '';
 <!-- ── 3. SERVICES DIRECTORY GRID ── -->
 <section class="section-padding" style="padding-top: 3rem;">
     <div class="container">
-        <div id="services-grid" class="service-details-grid reveal">
+        <div id="services-grid" class="service-details-grid">
             <?php foreach($services as $srv): 
                 // Determine if this service should be highlighted
                 $is_highlighted = ($highlight_slug != '' && (
