@@ -226,7 +226,6 @@ $pre_service = isset($_GET['service']) ? clean($_GET['service']) : '';
                         <a href="<?php echo SOCIAL_FACEBOOK; ?>" class="social-icon facebook" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="<?php echo SOCIAL_INSTAGRAM; ?>" class="social-icon instagram" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                         <a href="<?php echo SOCIAL_YOUTUBE; ?>" class="social-icon youtube" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="<?php echo SOCIAL_X; ?>" class="social-icon twitter" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>

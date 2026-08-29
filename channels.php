@@ -20,8 +20,7 @@ $shows = get_json_data('shows.json');
     <div class="container reveal">
         <div class="channel-branding-card">
             <div class="channel-branding-left">
-                <div class="channel-branding-p9">P9</div>
-                <h3>Prime 9 Kannada</h3>
+                <img src="<?php echo IMG_URL; ?>/prime-9.png" alt="Prime 9 Kannada Logo" style="height: 120px; width: auto; object-fit: contain; margin-bottom: 1.5rem; display: inline-block;">
                 <span class="section-tag" style="font-size:0.75rem; margin-top:0.3rem;">Digital Broadcast Channel</span>
             </div>
             

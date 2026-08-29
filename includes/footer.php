@@ -17,8 +17,6 @@
                 <a href="<?php echo SOCIAL_FACEBOOK; ?>" class="social-icon facebook" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="<?php echo SOCIAL_INSTAGRAM; ?>" class="social-icon instagram" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="<?php echo SOCIAL_YOUTUBE; ?>" class="social-icon youtube" aria-label="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                <a href="<?php echo SOCIAL_X; ?>" class="social-icon twitter" aria-label="X (Twitter)" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="<?php echo SOCIAL_WHATSAPP; ?>" class="social-icon whatsapp" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         
