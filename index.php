@@ -156,7 +156,7 @@ $gallery = get_merged_json_data('gallery.json');
     <div class="container reveal">
         <div class="prime-box">
             <div class="prime-brand-intro text-center">
-                <img src="<?php echo IMG_URL; ?>/prime-9.png" alt="Prime 9 Kannada Logo" style="height: 100px; width: auto; object-fit: contain; margin-bottom: 1.5rem; display: inline-block;">
+                <img src="<?php echo IMG_URL; ?>/prime-9.png" alt="Prime 9 Kannada Logo" style="height: 100px; width: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold); box-shadow: var(--shadow-md); margin-bottom: 1.5rem; display: inline-block;">
                 <p class="prime-tagline">Stories that inform. Journeys that inspire. Voices that matter.</p>
                 <p style="color: rgba(255, 255, 255, 0.7); max-width: 750px; margin: 0 auto;">
                     Prime 9 Kannada is a dynamic digital media platform bringing together news, inspiring personalities, spiritual journeys, business spotlights, and educational segments designed to connect communities through powerful storytelling.
