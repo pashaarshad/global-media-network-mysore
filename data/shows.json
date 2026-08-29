@@ -106,5 +106,19 @@
     ],
     "icon": "🌿",
     "image": "roots-reality"
+  },
+  {
+    "id": 7,
+    "slug": "the-lost-recipes",
+    "title": "The Lost Recipes",
+    "tagline": "Bringing Forgotten Flavours Back to Life.",
+    "description": "The Lost Recipes is a nostalgic culinary journey dedicated to rediscovering traditional dishes once lovingly prepared by our grandmothers and passed down through generations. From forgotten ingredients and age-old cooking methods to family traditions and regional flavours, each episode brings back recipes, memories, and stories that deserve to be preserved.",
+    "topics": [
+      "Rediscover the Taste",
+      "Relive the Memories",
+      "Preserve the Tradition"
+    ],
+    "icon": "🍲",
+    "image": "the-lost-recipes"
   }
 ]

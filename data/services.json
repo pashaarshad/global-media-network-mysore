@@ -370,5 +370,31 @@
       "Google Analytics 4 & Search Console Verification",
       "WhatsApp Business Integration & Starter Poster Kits"
     ]
+  },
+  {
+    "id": 27,
+    "category": "branding",
+    "title": "Brand My Business",
+    "tagline": "Your Business. Your Identity. Your Growth.",
+    "description": "Brand My Business is a business-focused segment created to help entrepreneurs, startups, local businesses, and growing brands strengthen their identity and reach the right audience. We showcase the story behind the business, its products and services, unique strengths, customer value, and growth journey through engaging digital content and strategic promotion.",
+    "items": [
+      "Build Your Identity",
+      "Showcase Your Strength",
+      "Grow Your Brand"
+    ]
+  },
+  {
+    "id": 28,
+    "category": "branding",
+    "title": "The Nation Skill",
+    "tagline": "Learn. Empower. Achieve.",
+    "description": "The Nation Skill is a career and empowerment initiative designed to connect students, women, and children with practical learning, skill development, career opportunities, and meaningful activities. Through training programmes, employment awareness, empowerment initiatives, and engaging learning experiences, we aim to help individuals build confidence, discover opportunities, and prepare for a stronger future.",
+    "items": [
+      "Job Requirements: Stay updated with employment opportunities, industry expectations, required skills, recruitment trends, and career pathways.",
+      "Student Training: Practical training programmes focused on employability, communication, technology, career readiness, professional skills, and personal development.",
+      "Women Empowerment: Empowering women through skill development, entrepreneurship awareness, career guidance, digital literacy, and opportunities for personal and professional growth.",
+      "Children Activities: Creative, educational, and skill-building activities designed to encourage curiosity, confidence, teamwork, and learning beyond the classroom.",
+      "Building Skills. Creating Opportunities. Empowering the Nation."
+    ]
   }
 ]

@@ -223,10 +223,10 @@ $pre_service = isset($_GET['service']) ? clean($_GET['service']) : '';
                 <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:2rem; margin-top:3rem;">
                     <h4 style="color:#FFF; font-size:0.9rem; text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem;">Follow Us</h4>
                     <div style="display:flex; gap:0.8rem;">
-                        <a href="<?php echo SOCIAL_FACEBOOK; ?>" class="social-icon" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;">FB</a>
-                        <a href="<?php echo SOCIAL_INSTAGRAM; ?>" class="social-icon" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;">IG</a>
-                        <a href="<?php echo SOCIAL_YOUTUBE; ?>" class="social-icon" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;">YT</a>
-                        <a href="<?php echo SOCIAL_X; ?>" class="social-icon" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;">X</a>
+                        <a href="<?php echo SOCIAL_FACEBOOK; ?>" class="social-icon facebook" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="<?php echo SOCIAL_INSTAGRAM; ?>" class="social-icon instagram" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="<?php echo SOCIAL_YOUTUBE; ?>" class="social-icon youtube" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="<?php echo SOCIAL_X; ?>" class="social-icon twitter" style="background:rgba(255,255,255,0.05); color:#FFF; border:var(--border-glow); width:40px; height:40px;" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
             </div>

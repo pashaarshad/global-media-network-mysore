@@ -14,11 +14,11 @@
             </a>
             <p>Global Media Network Mysore is committed to delivering credible information, engaging stories, local updates, entertainment, and meaningful content that connects communities across Mysore and beyond.</p>
             <div class="footer-socials">
-                <a href="<?php echo SOCIAL_FACEBOOK; ?>" class="social-icon" aria-label="Facebook">FB</a>
-                <a href="<?php echo SOCIAL_INSTAGRAM; ?>" class="social-icon" aria-label="Instagram">IG</a>
-                <a href="<?php echo SOCIAL_YOUTUBE; ?>" class="social-icon" aria-label="YouTube">YT</a>
-                <a href="<?php echo SOCIAL_X; ?>" class="social-icon" aria-label="X (Twitter)">X</a>
-                <a href="<?php echo SOCIAL_WHATSAPP; ?>" class="social-icon" aria-label="WhatsApp">WA</a>
+                <a href="<?php echo SOCIAL_FACEBOOK; ?>" class="social-icon facebook" aria-label="Facebook" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="<?php echo SOCIAL_INSTAGRAM; ?>" class="social-icon instagram" aria-label="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="<?php echo SOCIAL_YOUTUBE; ?>" class="social-icon youtube" aria-label="YouTube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="<?php echo SOCIAL_X; ?>" class="social-icon twitter" aria-label="X (Twitter)" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="<?php echo SOCIAL_WHATSAPP; ?>" class="social-icon whatsapp" aria-label="WhatsApp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         
