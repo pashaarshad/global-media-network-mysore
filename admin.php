@@ -1,5 +1,9 @@
 <?php
 session_start();
+// Prevent caching for admin dashboard
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 require_once __DIR__ . '/includes/config.php';
 
 // Handle logout
@@ -912,22 +916,31 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
         }
 
         // ── Form submits ──
+        console.log("Configuring dashboard forms...");
         document.querySelectorAll('form').forEach(form => {
-            if (form.getAttribute('action') !== "") return; // skip login form
+            const id = form.getAttribute('id');
+            if (!id || !id.startsWith('form-')) {
+                console.log("Skipping form selection:", id);
+                return;
+            }
+            
+            console.log("Successfully bound form submit listener to:", id);
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                const id = form.getAttribute('id');
+                console.log("Form submission intercepted for form ID:", id);
                 const tab = id.replace('form-', '');
                 const singular = tab.replace(/s$/, '');
                 const action = `add_${singular}`;
                 
                 const formData = new FormData(form);
+                console.log("Sending API request for action:", action);
                 const res = await fetchAPI(action, formData);
+                console.log("API response received:", res);
                 if (res.success) {
                     form.reset();
-                    if (tab === 'testimonials') {
+                    if (tab === 'testimonials' && ratingInput) {
                         ratingInput.value = 5;
-                        starIcons.forEach(s => s.classList.add('active'));
+                        if (starIcons) starIcons.forEach(s => s.classList.add('active'));
                     }
                     loadData(tab);
                 } else {
