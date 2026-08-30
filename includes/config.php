@@ -14,8 +14,7 @@ if (strpos($host, 'localhost') !== false || $host === '127.0.0.1') {
     define('SITE_URL', $protocol . $host);
 }
 define('SITE_EMAIL',   'globalmedianetworkmysore@gmail.com');
-define('SITE_PHONE',   '+91 821 4565100');
-define('SITE_PHONE2',  '+91 471 4050100');
+define('SITE_PHONE',   '+91 7996961255');
 define('SITE_ADDRESS', 'No. 99, 2nd Floor, KG Road, Mysuru, Karnataka – 570006');
 
 define('DATA_DIR',   __DIR__ . '/../data/');

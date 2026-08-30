@@ -184,6 +184,23 @@ switch ($action) {
         send_json(true, 'Testimonial deleted.');
         break;
 
+    // ----------------------------------------------------
+    // INBOX SUBMISSIONS
+    // ----------------------------------------------------
+    case 'get_submissions':
+        require_once __DIR__ . '/includes/functions.php';
+        send_json(true, '', get_json_data('contacts.json'));
+        break;
+
+    case 'delete_submission':
+        $id = $_POST['id'] ?? '';
+        require_once __DIR__ . '/includes/functions.php';
+        $submissions = get_json_data('contacts.json');
+        $new_submissions = array_values(array_filter($submissions, fn($s) => $s['id'] !== $id));
+        save_json_data('contacts.json', $new_submissions);
+        send_json(true, 'Submission deleted.');
+        break;
+
     default:
         send_json(false, 'Invalid action');
 }

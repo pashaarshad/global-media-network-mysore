@@ -58,7 +58,7 @@
                 </div>
                 <div class="contact-item">
                     <span class="icon">📞</span>
-                    <p><?php echo SITE_PHONE; ?><br><?php echo SITE_PHONE2; ?></p>
+                    <p><?php echo SITE_PHONE; ?></p>
                 </div>
                 <div class="contact-item">
                     <span class="icon">✉</span>

@@ -205,8 +205,8 @@ $pre_service = isset($_GET['service']) ? clean($_GET['service']) : '';
                         <div class="contact-item">
                             <span style="font-size:1.5rem; color:var(--accent-gold);">📞</span>
                             <div>
-                                <h4 style="color:#FFF; margin-bottom:0.2rem;">Office Call Phones</h4>
-                                <p style="color:rgba(255,255,255,0.7); font-size:0.9rem;"><?php echo SITE_PHONE; ?><br><?php echo SITE_PHONE2; ?></p>
+                                <h4 style="color:#FFF; margin-bottom:0.2rem;">Office Phone</h4>
+                                <p style="color:rgba(255,255,255,0.7); font-size:0.9rem;"><?php echo SITE_PHONE; ?></p>
                             </div>
                         </div>
                         <div class="contact-item">

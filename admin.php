@@ -1,13 +1,155 @@
 <?php
-$page_title = 'Admin Dashboard';
+session_start();
 require_once __DIR__ . '/includes/config.php';
+
+// Handle logout
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: " . SITE_URL . "/admin.php");
+    exit;
+}
+
+// Handle login POST
+$error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
+    $username = trim($_POST['username'] ?? '');
+    $password = trim($_POST['password'] ?? '');
+    
+    if ($username === 'admin' && $password === 'admin123') {
+        $_SESSION['admin_logged_in'] = true;
+        header("Location: " . SITE_URL . "/admin.php");
+        exit;
+    } else {
+        $error = 'Invalid username or password.';
+    }
+}
+
+// If not logged in, show the login form
+if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard — Global Media Network</title>
+    <title>Admin Login — Global Media Network</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #030B16;
+            --card-bg: #0b1a2f;
+            --accent-gold: #D9A441;
+            --text-light: #F4F6F9;
+            --text-muted: #8E9BAE;
+            --border-color: rgba(217, 164, 65, 0.15);
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+        .login-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem 2.5rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 25px rgba(217, 164, 65, 0.1);
+        }
+        .login-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--accent-gold);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .form-control {
+            width: 100%;
+            background-color: rgba(3, 11, 22, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-light);
+            padding: 0.8rem 1rem;
+            font-size: 0.95rem;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            border-color: var(--accent-gold);
+        }
+        .btn {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #f1c366;
+        }
+        .error-message {
+            color: #e63946;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="login-title">Admin Access Portal</div>
+        <form method="POST" action="">
+            <input type="hidden" name="login" value="1">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" placeholder="Enter admin username" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" placeholder="Enter admin password" required>
+            </div>
+            <button type="submit" class="btn">Log In</button>
+            <?php if ($error): ?>
+                <div class="error-message"><?php echo htmlspecialchars($error); ?></div>
+            <?php endif; ?>
+        </form>
+    </div>
+</body>
+</html>
+<?php
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Control Center — Global Media Network</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
@@ -114,6 +256,9 @@ require_once __DIR__ . '/includes/config.php';
             margin-top: auto;
             border-top: 1px solid var(--border-color);
             padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
         }
 
         .sidebar-footer a {
@@ -386,10 +531,13 @@ require_once __DIR__ . '/includes/config.php';
     <div class="sidebar">
         <div class="sidebar-brand">
             <i class="fa-solid fa-sliders"></i>
-            <span>GMN Admin</span>
+            <span>GMN Control</span>
         </div>
         <ul class="sidebar-menu">
-            <li class="sidebar-menu-item menu-item active" data-tab="gallery">
+            <li class="sidebar-menu-item menu-item active" data-tab="submissions">
+                <button><i class="fa-solid fa-envelope-open-text"></i> Inquiries Inbox</button>
+            </li>
+            <li class="sidebar-menu-item menu-item" data-tab="gallery">
                 <button><i class="fa-solid fa-images"></i> Gallery Manager</button>
             </li>
             <li class="sidebar-menu-item menu-item" data-tab="clients">
@@ -404,14 +552,29 @@ require_once __DIR__ . '/includes/config.php';
         </ul>
         <div class="sidebar-footer">
             <a href="index.php" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Website</a>
+            <a href="admin.php?logout=1" style="color: #e63946;"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
         </div>
     </div>
 
     <!-- Main Content Area -->
     <div class="main-content">
         
+        <!-- ── TAB: SUBMISSIONS ── -->
+        <div id="tab-submissions" class="tab-content active">
+            <header>
+                <div>
+                    <h1>Contact &amp; Service Inquiries</h1>
+                    <p>Track all dynamic submissions and pathway inquiries logged by users on your platform.</p>
+                </div>
+            </header>
+            <div class="card" style="width: 100%;">
+                <div class="card-title"><i class="fa-solid fa-inbox"></i> Inbox Inquiries</div>
+                <div class="items-list" id="list-submissions" style="max-height: 600px;"></div>
+            </div>
+        </div>
+
         <!-- ── TAB: GALLERY ── -->
-        <div id="tab-gallery" class="tab-content active">
+        <div id="tab-gallery" class="tab-content">
             <header>
                 <div>
                     <h1>Gallery Manager</h1>
@@ -515,9 +678,12 @@ require_once __DIR__ . '/includes/config.php';
                         <div class="form-group">
                             <label>Category</label>
                             <select name="category" class="form-control">
-                                <option value="production">Production &amp; Broadcast</option>
-                                <option value="digital">Digital &amp; Social Marketing</option>
-                                <option value="consulting">Ad Consulting &amp; Events</option>
+                                <option value="marketing">Marketing &amp; Ads</option>
+                                <option value="branding">Branding &amp; Video</option>
+                                <option value="social">Social Media</option>
+                                <option value="google">Google Setup</option>
+                                <option value="tech">Technology</option>
+                                <option value="reputation">Reputation &amp; PR</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -581,7 +747,7 @@ require_once __DIR__ . '/includes/config.php';
 
     </div>
 
-    <!-- AJAX Client Operations Script -->
+    <!-- AJAX Control Center Operations Script -->
     <script>
         // ── Navigation tabs ──
         document.querySelectorAll('.sidebar-menu-item').forEach(item => {
@@ -599,19 +765,21 @@ require_once __DIR__ . '/includes/config.php';
         // ── Rating Stars Click ──
         const starIcons = document.querySelectorAll('#rating-stars-select i');
         const ratingInput = document.getElementById('input-rating');
-        starIcons.forEach(star => {
-            star.addEventListener('click', () => {
-                const rating = star.getAttribute('data-rating');
-                ratingInput.value = rating;
-                starIcons.forEach(s => {
-                    if (s.getAttribute('data-rating') <= rating) {
-                        s.classList.add('active');
-                    } else {
-                        s.classList.remove('active');
-                    }
+        if (starIcons.length > 0 && ratingInput) {
+            starIcons.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = star.getAttribute('data-rating');
+                    ratingInput.value = rating;
+                    starIcons.forEach(s => {
+                        if (s.getAttribute('data-rating') <= rating) {
+                            s.classList.add('active');
+                        } else {
+                            s.classList.remove('active');
+                        }
+                    });
                 });
             });
-        });
+        }
 
         // ── API Operations ──
         async function fetchAPI(action, params = {}) {
@@ -661,7 +829,28 @@ require_once __DIR__ . '/includes/config.php';
                 const row = document.createElement('div');
                 row.className = 'item-row';
                 
-                if (tab === 'gallery') {
+                if (tab === 'submissions') {
+                    row.style.alignItems = 'start';
+                    row.innerHTML = `
+                        <div class="item-info" style="width:100%; display:flex; flex-direction:column; gap:0.5rem; align-items:start;">
+                            <div style="display:flex; justify-content:space-between; width:100%; border-bottom:1px solid rgba(255,255,255,0.05); padding-bottom:0.4rem;">
+                                <h4 style="font-size:1.05rem; color:var(--accent-gold);">${escapeHTML(item.name)}</h4>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">${escapeHTML(item.created_at || 'N/A')}</span>
+                            </div>
+                            <div style="font-size:0.88rem; display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; width:100%; color:rgba(255,255,255,0.85);">
+                                <div><strong>Email:</strong> ${escapeHTML(item.email)}</div>
+                                <div><strong>Phone:</strong> ${escapeHTML(item.phone)}</div>
+                                <div><strong>Pathway:</strong> ${escapeHTML(item.pathway)}</div>
+                                <div><strong>Subject:</strong> ${escapeHTML(item.subject)}</div>
+                                <div><strong>Company:</strong> ${escapeHTML(item.company || 'N/A')}</div>
+                                <div><strong>Show:</strong> ${escapeHTML(item.selected_show || 'N/A')}</div>
+                                <div><strong>Service:</strong> ${escapeHTML(item.selected_service || 'N/A')}</div>
+                            </div>
+                            <div style="font-size:0.9rem; background:rgba(0,0,0,0.25); padding:0.8rem; border-radius:6px; border:1px solid rgba(255,255,255,0.05); width:100%; margin-top:0.4rem; white-space:pre-wrap; line-height:1.4;">${escapeHTML(item.message)}</div>
+                        </div>
+                        <button class="action-btn" style="align-self:start; margin-top:0.2rem;" onclick="deleteItem('submissions', '${item.id}')"><i class="fa-solid fa-trash"></i></button>
+                    `;
+                } else if (tab === 'gallery') {
                     const folder = item.orientation === 'vertical' ? 'V/' : '';
                     row.innerHTML = `
                         <div class="item-info">
@@ -724,18 +913,18 @@ require_once __DIR__ . '/includes/config.php';
 
         // ── Form submits ──
         document.querySelectorAll('form').forEach(form => {
+            if (form.getAttribute('action') !== "") return; // skip login form
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const id = form.getAttribute('id');
                 const tab = id.replace('form-', '');
-                const singular = tab.replace(/s$/, ''); // e.g. clients -> client
+                const singular = tab.replace(/s$/, '');
                 const action = `add_${singular}`;
                 
                 const formData = new FormData(form);
                 const res = await fetchAPI(action, formData);
                 if (res.success) {
                     form.reset();
-                    // Reset rating stars to 5 if testimonial form
                     if (tab === 'testimonials') {
                         ratingInput.value = 5;
                         starIcons.forEach(s => s.classList.add('active'));
@@ -756,7 +945,7 @@ require_once __DIR__ . '/includes/config.php';
 
         // Initial load
         window.addEventListener('DOMContentLoaded', () => {
-            loadData('gallery');
+            loadData('submissions');
         });
     </script>
 </body>
