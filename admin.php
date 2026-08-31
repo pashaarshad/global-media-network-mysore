@@ -688,6 +688,7 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
                                 <option value="google">Google Setup</option>
                                 <option value="tech">Technology</option>
                                 <option value="reputation">Reputation &amp; PR</option>
+                                <option value="nation-skill">The Nation Skill (Community &amp; Careers)</option>
                             </select>
                         </div>
                         <div class="form-group">

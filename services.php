@@ -471,6 +471,36 @@ $highlight_slug = isset($_GET['highlight']) ? clean($_GET['highlight']) : '';
                     </div>
                 </div>
 
+                <!-- Dynamic Nation Skill additions from Admin Dashboard -->
+                <?php 
+                $skill_count = 4;
+                foreach($services as $srv): 
+                    if ($srv['category'] !== 'nation-skill') continue;
+                    $skill_count++;
+                ?>
+                    <div class="nation-skill-card">
+                        <div class="skill-card-badge"><?php echo sprintf("%02d", $skill_count); ?>. INITIATIVE</div>
+                        <h3 class="skill-card-title">
+                            <i class="fa-solid fa-star-of-life"></i> <?php echo htmlspecialchars($srv['title']); ?>
+                        </h3>
+                        <p class="skill-card-desc">
+                            <?php echo htmlspecialchars($srv['description']); ?>
+                        </p>
+                        
+                        <?php if(!empty($srv['items'])): ?>
+                        <ul class="service-items" style="margin-bottom: 2rem; border-top: 1px solid rgba(100, 123, 155, 0.1); padding-top: 1.2rem;">
+                            <?php foreach($srv['items'] as $item): ?>
+                                <li><?php echo htmlspecialchars($item); ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                        <?php endif; ?>
+                        
+                        <div style="margin-top: auto;">
+                            <a href="<?php echo SITE_URL; ?>/contact.php?path=skill&service=<?php echo urlencode($srv['title']); ?>" class="btn btn-outline-gold btn-sm" style="width:100%; text-align:center;">Inquire / Register</a>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+
             </div>
         </div>
     </section>
